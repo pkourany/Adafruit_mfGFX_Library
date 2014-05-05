@@ -10,3 +10,6 @@ Please see the README.pdf files for instructions on creating and adding new font
 BE AWARE that though font data does not take up Spark RAM, they do however take up flash space so having too many fonts may prove problematic.
 
 ADDED ARDUINO VERSION in folder "SharpMemDisplay" which compiles for IDE versions 1.05 and greater
+
+ADDED GLCDFONT from original GFX library and made it default font so code based on older font will work
+
