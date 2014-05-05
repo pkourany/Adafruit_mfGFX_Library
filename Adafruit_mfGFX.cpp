@@ -48,7 +48,8 @@ Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   textsize  = 1;
   textcolor = textbgcolor = 0xFFFF;
   wrap      = true;
-  setFont(ARIAL_8);		// May be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
+  // Default to GLCDFONT to be compatible with existing code
+  setFont(GLCDFONT);		// May also be set to TIMESNR_8, CENTURY_8, COMICS_8 or TEST (for testing candidate fonts)
  }
 
 void Adafruit_GFX::setFont(uint8_t f) {
@@ -72,6 +73,11 @@ void Adafruit_GFX::setFont(uint8_t f) {
     case COMICS_8:
       fontData = comicSansMS_8ptBitmaps;
 	  fontDesc = comicSansMS_8ptDescriptors;
+      fontKern = 1;
+      break;
+    case GLCDFONT:
+      fontData = glcdfontBitmaps;
+	  fontDesc = glcdfontDescriptors;
       fontKern = 1;
       break;
     case TEST:
