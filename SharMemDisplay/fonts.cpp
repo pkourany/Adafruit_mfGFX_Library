@@ -4,7 +4,7 @@
 #include "fonts.h"
 
 // Character bitmaps for timesNewRoman 8pt
-const uint8_t timesNewRoman_8ptBitmaps[] = 
+const uint8_t timesNewRoman_8ptBitmaps[] PROGMEM = 
 {
 	0x20, 0x7F,		// Start Character, End Character
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -105,7 +105,7 @@ const uint8_t timesNewRoman_8ptBitmaps[] =
 };
 
 // Character bitmaps for timesNewRoman 8pt
-const FontDescriptor timesNewRoman_8ptDescriptors[] =
+const FontDescriptor timesNewRoman_8ptDescriptors[] PROGMEM =
 {
 	{2, 12, 0}, 	
 	{1, 12, 12}, 	
@@ -206,7 +206,7 @@ const FontDescriptor timesNewRoman_8ptDescriptors[] =
 
 
 // Character bitmaps for AgencyFB 11pt
-const uint8_t centuryGothic_8ptBitmaps[] = 
+const uint8_t centuryGothic_8ptBitmaps[] PROGMEM = 
 {
 	0x20, 0x7F,		// Start Character, End Character
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -309,7 +309,7 @@ const uint8_t centuryGothic_8ptBitmaps[] =
 
 // Character descriptors for AgencyFB 11pt
 // { [Char width in bits], [Char height in bits], [Offset into agencyFB_11ptCharBitmaps in bytes] }
-const FontDescriptor centuryGothic_8ptDescriptors[] = 
+const FontDescriptor centuryGothic_8ptDescriptors[] PROGMEM = 
 {
 	{2, 11, 0}, 		//   
 	{1, 11, 11}, 		// ! 
@@ -409,7 +409,7 @@ const FontDescriptor centuryGothic_8ptDescriptors[] =
 };
 
 
-const uint8_t arial_8ptBitmaps[] = 
+const uint8_t arial_8ptBitmaps[] PROGMEM = 
 {
 	0x20, 0x7F,		// Start Character, End Character
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -509,7 +509,7 @@ const uint8_t arial_8ptBitmaps[] =
 	0x00, 0x00, 0x00, 0xE8, 0xB0, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-const FontDescriptor arial_8ptDescriptors[] =
+const FontDescriptor arial_8ptDescriptors[] PROGMEM =
 {
 	{2, 10, 0}, 	
 	{1, 10, 10}, 	
@@ -608,7 +608,7 @@ const FontDescriptor arial_8ptDescriptors[] =
 	{5, 10, 980}	
 };
 
-const uint8_t comicSansMS_8ptBitmaps[] = 
+const uint8_t comicSansMS_8ptBitmaps[] PROGMEM = 
 {
 	0x20, 0x7F,		// Start Character, End Character
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -708,7 +708,7 @@ const uint8_t comicSansMS_8ptBitmaps[] =
 	0x00, 0x00, 0x00, 0x64, 0xE4, 0x98, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 };
 
-const FontDescriptor comicSansMS_8ptDescriptors[] =
+const FontDescriptor comicSansMS_8ptDescriptors[] PROGMEM =
 {
 	{2, 12, 0}, 	
 	{1, 12, 12}, 	
@@ -807,7 +807,7 @@ const FontDescriptor comicSansMS_8ptDescriptors[] =
 	{6, 12, 1188}, 	
 };
 
-const uint8_t glcdfontBitmaps[] = 
+const uint8_t glcdfontBitmaps[] PROGMEM = 
 {
 	0x00, 0xFF,		// Start Character, End Character
 	0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
@@ -1067,7 +1067,7 @@ const uint8_t glcdfontBitmaps[] =
 	0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
 };
 
-const FontDescriptor glcdfontDescriptors[] =
+const FontDescriptor glcdfontDescriptors[] PROGMEM =
 {
 	{5,8,0},
 	{5,8,8},
@@ -1327,7 +1327,7 @@ const FontDescriptor glcdfontDescriptors[] =
 	{5,8,2040} 	
 };
 
-const uint8_t testBitmaps[] =
+const uint8_t testBitmaps[] PROGMEM =
 {
 	0x00, 0xFF,		// Start Character, End Character
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -1427,7 +1427,7 @@ const uint8_t testBitmaps[] =
 	0x00, 0xEE, 0xEE, 0xEE, 0x22, 0xCC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00	
 };
 
-const FontDescriptor testDescriptors[] =
+const FontDescriptor testDescriptors[] PROGMEM =
 {
 	{2, 14, 0}, 	
 	{11, 14, 14}, 	
