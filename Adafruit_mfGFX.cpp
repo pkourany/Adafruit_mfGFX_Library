@@ -31,7 +31,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "Adafruit_mfGFX_T.h"
+#include "Adafruit_mfGFX.h"
 #include "fonts.h"
 #ifdef __AVR__
  #include <avr/pgmspace.h>
