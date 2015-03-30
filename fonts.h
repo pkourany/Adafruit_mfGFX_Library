@@ -5,7 +5,12 @@
 #ifndef _fonts_h
 #define _fonts_h
 
-#include "application.h"
+#if ARDUINO >= 100
+ #include "Arduino.h"
+ #include "Print.h"
+#else
+ #include "WProgram.h"
+#endif
 
 // Font selection descriptors - Add an entry for each new font and number sequentially
 #define TIMESNR_8	0
