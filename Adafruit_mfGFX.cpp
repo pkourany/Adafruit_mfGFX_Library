@@ -31,12 +31,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "Adafruit_mfGFX.h"
+#include "Adafruit_mfGFX_T.h"
 #include "fonts.h"
-
-
-#define pgm_read_byte(addr) (*(const uint8_t *)(addr))
-
+#ifdef __AVR__
+ #include <avr/pgmspace.h>
+#else
+ #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
+#endif
 
 Adafruit_GFX::Adafruit_GFX(int16_t w, int16_t h):
   WIDTH(w), HEIGHT(h)
@@ -96,6 +97,7 @@ void Adafruit_GFX::setFont(uint8_t f) {
   fontStart = pgm_read_byte(fontData+FONT_START);
   fontEnd = pgm_read_byte(fontData+FONT_END);
 }
+
 
 // Draw a circle outline
 void Adafruit_GFX::drawCircle(int16_t x0, int16_t y0, int16_t r,
@@ -409,8 +411,11 @@ void Adafruit_GFX::drawBitmap(int16_t x, int16_t y,
   }
 }
 
+#if ARDUINO >= 100
 size_t Adafruit_GFX::write(uint8_t c) {
-  
+#else
+void Adafruit_GFX::write(uint8_t c) {
+#endif
   if (c == '\n') {
     cursor_y += textsize*fontDesc[0].height;	//all chars are same height so use height of space char
     cursor_x  = 0;
@@ -429,7 +434,9 @@ size_t Adafruit_GFX::write(uint8_t c) {
       cursor_x = 0;
     }
   }
+#if ARDUINO >= 100
   return 1;
+#endif
 }
 
 void Adafruit_GFX::drawFastChar(int16_t x, int16_t y, unsigned char c,
@@ -483,6 +490,7 @@ void Adafruit_GFX::drawChar(int16_t x, int16_t y, unsigned char c,
     bitCount = 0;
   }
 }
+
 
 void Adafruit_GFX::setCursor(int16_t x, int16_t y) {
   cursor_x = x;
@@ -540,3 +548,4 @@ int16_t Adafruit_GFX::height(void) {
 void Adafruit_GFX::invertDisplay(boolean i) {
   // Do nothing, must be subclassed if supported
 }
+
