@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #include "Adafruit_mfGFX.h"
 #include "fonts.h"
+
 #ifdef __AVR__
  #include <avr/pgmspace.h>
 #else
